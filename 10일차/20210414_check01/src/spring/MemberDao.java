@@ -25,7 +25,7 @@ public class MemberDao {
 
 	public Member selectByEmail(String email) {
 		List<Member> results = jdbcTemplate.query(
-				"select * from spring5fs.member where EMAIL = ?",
+				"select * from MEMBER where EMAIL = ?",
 				new RowMapper<Member>() {
 					@Override
 					public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
