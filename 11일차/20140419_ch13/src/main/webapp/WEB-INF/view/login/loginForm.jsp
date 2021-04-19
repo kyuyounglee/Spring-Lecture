@@ -7,12 +7,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title> <spring:message code = "login.title"/>  </title>
 </head>
 <body>
 	<form:form modelAttribute="loginCommand">
-	
-	
+	<form:errors/>
+	<p>
+		<label><spring:message code = "email"/>
+			<form:input path="email"/>
+			<form:errors path = "email"/>
+		</label>
+	</p>
+	<p>
+		<label><spring:message code = "password"/>
+			<form:input path="password"/>
+			<form:errors path = "password"/>
+		</label>
+	</p>
 	
 	<input type="submit" value='<spring:message code = "login.btn" />'>
 	</form:form>
