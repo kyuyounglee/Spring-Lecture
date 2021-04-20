@@ -56,5 +56,11 @@ public class MemberConfig {
 		return new AuthService(memberDao());
 	}
 	
+	@Bean
+	public ChangePasswordService changePasswordService() {
+		ChangePasswordService c = new ChangePasswordService();
+		c.setMemberDao(memberDao());
+		return new ChangePasswordService();
+	}
 	
 }

@@ -4,11 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import controller.ChangePwdController;
 import controller.HelloController;
 import controller.LoginController;
 import controller.LogoutController;
 import controller.RegisterController;
 import spring.AuthService;
+import spring.ChangePasswordService;
+import spring.ChangePwdService;
 import spring.MemberRegisterService;
 import survey.SurveyController;
 
@@ -17,7 +20,9 @@ public class ControllerConfig {
 	@Autowired
 	private MemberRegisterService memberRegSvc;
 	@Autowired
-	private AuthService authservice;
+	private AuthService authservice;	
+	@Autowired
+	private ChangePwdService changePwdService;	
 	
 	@Bean
 	public HelloController h() {
@@ -42,5 +47,9 @@ public class ControllerConfig {
 	@Bean
 	public LogoutController logoutController() {
 		return new LogoutController();
+	}
+	@Bean
+	public ChangePwdController changePwdController() {
+		return new ChangePwdController(changePwdService);
 	}
 }
