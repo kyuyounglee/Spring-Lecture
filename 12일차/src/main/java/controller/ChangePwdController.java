@@ -15,7 +15,7 @@ import spring.MemberNotFoundException;
 import spring.WrongIdPasswordException;
 
 @Controller
-@RequestMapping("/edit/changePassword")
+@RequestMapping("/editor/changePassword")
 public class ChangePwdController {
 
 	private ChangePwdService changePwdService;
@@ -30,7 +30,7 @@ public class ChangePwdController {
 			@ModelAttribute("command") ChangePwdCommand pwdCmd
 			) 
 	{
-		return "edit/changePwdForm";
+		return "editor/changePwdForm";
 	}
 	@PostMapping
 	public String submit(

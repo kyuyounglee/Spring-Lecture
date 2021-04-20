@@ -10,7 +10,6 @@ import controller.LoginController;
 import controller.LogoutController;
 import controller.RegisterController;
 import spring.AuthService;
-import spring.ChangePasswordService;
 import spring.ChangePwdService;
 import spring.MemberRegisterService;
 import survey.SurveyController;

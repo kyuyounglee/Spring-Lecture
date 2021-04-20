@@ -8,7 +8,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import spring.AuthService;
-import spring.ChangePasswordService;
+import spring.ChangePwdService;
 import spring.MemberDao;
 import spring.MemberRegisterService;
 
@@ -46,9 +46,8 @@ public class MemberConfig {
 	}
 
 	@Bean
-	public ChangePasswordService changePwdSvc() {
-		ChangePasswordService pwdSvc = new ChangePasswordService();
-		pwdSvc.setMemberDao(memberDao());
+	public ChangePwdService changePwdSvc() {
+		ChangePwdService pwdSvc = new ChangePwdService(memberDao());		
 		return pwdSvc;
 	}
 	@Bean
@@ -56,11 +55,5 @@ public class MemberConfig {
 		return new AuthService(memberDao());
 	}
 	
-	@Bean
-	public ChangePasswordService changePasswordService() {
-		ChangePasswordService c = new ChangePasswordService();
-		c.setMemberDao(memberDao());
-		return new ChangePasswordService();
-	}
 	
 }

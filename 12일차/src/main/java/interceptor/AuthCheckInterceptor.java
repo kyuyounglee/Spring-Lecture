@@ -3,7 +3,6 @@ package interceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.websocket.Session;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 
@@ -19,8 +18,9 @@ public class AuthCheckInterceptor implements HandlerInterceptor{
 			, Object handler)
 			throws Exception 
 	{
+		System.out.println("###############  interceptor 구동 ####################");
 		// session이 없으면 만들지 않는다  - false
-		HttpSession session =  request.getSession(false);
+		HttpSession session =  request.getSession(false);		
 		if(session != null) {
 			Object authInfo =  session.getAttribute("authInfo");
 			if(authInfo != null)
