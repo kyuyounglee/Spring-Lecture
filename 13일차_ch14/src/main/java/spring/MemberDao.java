@@ -10,6 +10,7 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
@@ -99,4 +100,16 @@ public class MemberDao {
 		return result;
 	}
 
+	
+	public Member selectById(long id) {
+		Member member= null; 
+				try {
+					member = jdbcTemplate.queryForObject(
+					"select * from member where  id = ?"
+					, memRowMapper
+					, id);
+				} catch (DataAccessException e) {					
+				}				
+		return member;
+	}
 }

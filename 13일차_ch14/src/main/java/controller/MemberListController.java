@@ -27,8 +27,7 @@ public class MemberListController {
 		if(errors.hasErrors())
 			return "member/memberList";
 		if(cmd.getFrom() != null && cmd.getTo() != null) {
-			List<Member> members =  memberDao.selectByRegDate(cmd.getFrom(), cmd.getTo());
-			System.out.println("###############  members.size() = " + members.size());
+			List<Member> members =  memberDao.selectByRegDate(cmd.getFrom(), cmd.getTo());			
 			model.addAttribute("members", members);
 		}		
 		return "member/memberList";

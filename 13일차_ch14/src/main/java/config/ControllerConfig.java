@@ -8,6 +8,7 @@ import controller.ChangePwdController;
 import controller.HelloController;
 import controller.LoginController;
 import controller.LogoutController;
+import controller.MemberDetailController;
 import controller.MemberListController;
 import controller.RegisterController;
 import spring.AuthService;
@@ -56,5 +57,9 @@ public class ControllerConfig {
 	@Bean
 	public MemberListController memberlstCtrl() {
 		return new MemberListController();
+	}
+	@Bean
+	public MemberDetailController mdc() {
+		return new MemberDetailController();
 	}
 }
