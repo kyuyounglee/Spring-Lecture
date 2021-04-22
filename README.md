@@ -16,3 +16,12 @@ NAME varchar(100),
 REGDATE datetime,
 unique key(EMAIL)
 )engine = InnoDB character set = utf8;
+
+
+차주 수업마무리
+1.전체 리뷰 - 복습
+2.java->servlet->jsp->spring
+3.스프링 부트
+4.AOP
+5.화면 ui -> javascript
+6.css-> bootstrip
