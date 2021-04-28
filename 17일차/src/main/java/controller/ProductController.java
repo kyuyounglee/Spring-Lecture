@@ -25,6 +25,7 @@ public class ProductController {
 			Model model
 			) {		
 		// 리스트로부터 온 상품의 id를 가지고 상품정보를 jsp로 보낸다
+		System.out.println("############# id = "+id);
 		Product product =  dao.selectById(id);
 		model.addAttribute("product",product);
 		return "productDetail";

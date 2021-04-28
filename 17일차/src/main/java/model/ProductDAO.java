@@ -31,8 +31,8 @@ public class ProductDAO {
 	};
 	
 	public Product selectById(String id) {
-		String sql = "select * from product where id = ?";
-		return jdbcTemp.queryForObject(sql, rowMapper);
+		String sql = "select * from product where p_id = ?";
+		return jdbcTemp.queryForObject(sql, rowMapper,id);
 	}
 	
 	public List<Product> selectByAll() {
