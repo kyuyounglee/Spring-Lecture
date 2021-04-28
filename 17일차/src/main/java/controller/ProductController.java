@@ -41,6 +41,16 @@ public class ProductController {
 		return "productList";
 	}
 	
+	@GetMapping("/regProduct")
+	public String getRegProduct(Product product) {
+		return "regProduct";
+	}
+	@PostMapping("/regProduct")
+	public String postRegProduct() {
+		return "productList";
+	}
+	
+	
 	
 //	@PostMapping
 //	public String insertProduct() {

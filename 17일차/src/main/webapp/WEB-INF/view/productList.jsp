@@ -12,6 +12,9 @@
 	<div class="jumbotron">
 		<div class="container">
 			<h1 class="display-3">상품 목록</h1>
+			<h5 class="display-5" align="right">
+				<a href='<c:url value="/regProduct" />'>상품 등록</a>
+			</h5>
 		</div>
 	</div>
 	<c:if test="${! empty productlist}">	
@@ -30,6 +33,7 @@
 			</div>			
 		</div>
 	</c:if>
+	
 	
 	
 	<%-- <c:if test="${! empty productlist}">

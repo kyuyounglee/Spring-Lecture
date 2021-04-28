@@ -21,23 +21,26 @@
 	<div class="form-group">
     	<label for="exampleFormControlInput1">설명</label>
     	<form:textarea class="form-control"  path="p_description" rows="3"/>
-  	</div>		
-	<p>
-		<form:input path="p_description"/>
-	</p>
-	<p>
-		<form:input path="p_category"/>
-	</p>
-	<p>
-		<form:input path="p_manufacturer"/>
-	</p>
-	<p>
-		<form:input path="p_condition"/>
-	</p>
-	<p>
-		<form:input path="p_fileName"/>
-	</p>
-	
+  	</div>	
+
+	<div class="form-group">
+    	<label for="exampleFormControlInput1">카테고리</label>    	
+    	<form:input class="form-control" path="p_category"/>
+  	</div>
+  	
+  	<div class="form-group">
+    	<label for="exampleFormControlInput1">제조사</label>    	
+    	<form:input class="form-control" path="p_manufacturer"/>
+  	</div>
+  	
+  	<div class="form-group">
+    	<label for="exampleFormControlInput1">상품상태</label>    	
+    	<form:input class="form-control" path="p_condition"/>
+  	</div>	
+  	<div class="form-group">
+    	<label for="exampleFormControlInput1">이미지파일명</label>    	
+    	<form:input class="form-control" path="p_fileName"/>
+  	</div>	
 	
 	</form:form>
 </body>
